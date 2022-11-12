@@ -4,12 +4,12 @@ from PIL import Image
  
 # taking image which user wants
 # in the QR code center
-Logo_link = 'ALTA.jpg'
+Logo_link = 'photo.png'
  
 logo = Image.open(Logo_link)
  
 # taking base width
-basewidth = 180
+basewidth = 150
  
 # adjust image size
 wpercent = (basewidth/float(logo.size[0]))
@@ -21,7 +21,7 @@ QRcode = qrcode.QRCode(
 )
  
 # taking url or text
-url = 'https://www.vsvlegal.com/en/eo-el-salvador-noviembre-2022/'
+url = 'https://www.linkedin.com/in/raulescamilla/'
  
 # adding URL or text to QRcode
 QRcode.add_data(url)
@@ -30,7 +30,7 @@ QRcode.add_data(url)
 QRcode.make()
  
 # taking color name from user
-QRcolor = (15, 36, 63)
+QRcolor = (75, 66, 57)
  
 # adding color to QR code
 QRimg = QRcode.make_image(
